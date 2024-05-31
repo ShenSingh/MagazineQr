@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  scanResult: any=''; // Add this line
   title = 'MagazineQr';
+
+  onCodeResult(resultString: string) {
+    this.scanResult = resultString;
+  }
 }
