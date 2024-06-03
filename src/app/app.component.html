@@ -1,6 +1,22 @@
-<zxing-scanner (scanSuccess)="onCodeResult($event)"></zxing-scanner>
+<div class="header">
+  <h1>New Magazine Prison</h1>
+</div>
 
-<p>
-  <small>Scan Result</small>
-  <strong>{{scanResult}}</strong>
-</p>
+<div class="title">
+  <p>
+    <small>Scan Visitor Pass</small>
+  </p>
+</div>
+
+<zxing-scanner class="camView" (scanSuccess)="onCodeResult($event)"></zxing-scanner>
+
+<div class="result">
+  <p>
+    <small>Visitor ID</small>
+    <strong>{{scanResult}}</strong>
+  </p>
+</div>
+
+<div class="profileBtn">
+  <button [routerLink]="'/result'"><b>View Profile</b></button>
+</div>
